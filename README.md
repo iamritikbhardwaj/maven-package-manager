@@ -128,3 +128,12 @@ MIT License
 ## 👨‍💻 Author
 
 Created by \[Ritik Singh]
+
+# 🛠️ Maven Dependency Updater (Go CLI Tool)
+
+[![Go Version](https://img.shields.io/badge/Go-1.18%2B-blue)](https://golang.org/dl/)  
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)  
+[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg?style=flat)](CONTRIBUTING.md)  
+[![Issues](https://img.shields.io/github/issues/iamritikbhardwaj/maven-package-manager)](https://github.com/iamritikbhardwaj/maven-package-manager/issues)  
+[![Pull Requests](https://img.shields.io/github/issues-pr/iamritikbhardwaj/maven-package-manager)](https://github.com/iamritikbhardwaj/maven-package-manager/pulls)  
+[![Stars](https://img.shields.io/github/stars/iamritikbhardwaj/maven-package-manager?style=social)](https://github.com/iamritikbhardwaj/maven-package-manager/stargazers)  
