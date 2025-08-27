@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/xml"
 	"fmt"
-	"io/ioutil"
 	"os"
 )
 
@@ -22,6 +21,8 @@ type Dependency struct {
 	Version    string `xml:"version"`
 }
 
+const pomFilePath = "pom.xml"
+
 func main() {
 	if len(os.Args) != 4 {
 		fmt.Println("Usage: go run main.go <groupId> <artifactId> <version>")
@@ -39,7 +40,7 @@ func main() {
 	}
 	defer file.Close()
 
-	data, err := ioutil.ReadAll(file)
+	data, err := os.ReadFile(pomFilePath)
 	if err != nil {
 		fmt.Println("Error reading pom.xml:", err)
 		return
@@ -84,7 +85,7 @@ func main() {
 	// Add XML header
 	finalOutput := []byte(xml.Header + string(output))
 
-	if err := ioutil.WriteFile("pom.xml", finalOutput, 0644); err != nil {
+	if err := os.WriteFile(pomFilePath, finalOutput, 0644); err != nil {
 		fmt.Println("Error writing pom.xml:", err)
 		return
 	}
