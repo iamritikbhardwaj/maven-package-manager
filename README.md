@@ -40,7 +40,7 @@ maven-dep-updater/
 go run main.go <groupId> <artifactId> <version>
 ````
 
-### Example:
+### Example
 
 ```bash
 go run main.go org.apache.commons commons-lang3 3.12.0
@@ -57,15 +57,15 @@ go build -o maven-add-dep main.go
 
 ## 🧠 How It Works
 
-* The tool parses `pom.xml` using Go's `encoding/xml`
-* It searches for an existing dependency by `groupId` and `artifactId`
-* If found:
+- The tool parses `pom.xml` using Go's `encoding/xml`
+- It searches for an existing dependency by `groupId` and `artifactId`
+- If found:
 
-  * The `<version>` is updated
-* If not:
+  - The `<version>` is updated
+- If not:
 
-  * A new `<dependency>` block is added under `<dependencies>`
-* The updated `pom.xml` is written back
+  - A new `<dependency>` block is added under `<dependencies>`
+- The updated `pom.xml` is written back
 
 ---
 
@@ -104,18 +104,18 @@ After:
 
 ## ⚠️ Notes
 
-* The script assumes the `pom.xml` structure is standard (with a `<dependencies>` section).
-* It doesn’t resolve transitive dependencies — it only updates the XML.
-* Always commit or back up your `pom.xml` before running.
+- The script assumes the `pom.xml` structure is standard (with a `<dependencies>` section).
+- It doesn’t resolve transitive dependencies — it only updates the XML.
+- Always commit or back up your `pom.xml` before running.
 
 ---
 
 ## 📌 TODO (Optional Enhancements)
 
-* [ ] Support inserting `<dependencies>` if missing
-* [ ] Format output using `go/format` or an XML linter
-* [ ] Fetch latest versions from Maven Central (via API)
-* [ ] Validate input format
+- [ ] Support inserting `<dependencies>` if missing
+- [ ] Format output using `go/format` or an XML linter
+- [ ] Fetch latest versions from Maven Central (via API)
+- [ ] Validate input format
 
 ---
 
